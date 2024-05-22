@@ -45,7 +45,7 @@ public class FileMenu {
                     break;
                 case "save":
                     if(words.length==1&& LoadedNFAS.getInstance().getFileName() != null){
-                        System.out.println("\n");
+                        System.out.println("");
                         SaveCommand saveCommand = new SaveCommand();
                         System.out.println(saveCommand.save());
                     }
