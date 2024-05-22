@@ -37,7 +37,6 @@ public class OpenFile implements OpenFileCommand {
             for (int i = 0; i < nfaNodes.getLength(); i++) {
                 Element nfaElement = (Element) nfaNodes.item(i);
 
-                // Extract NFA attributes
                 int id = Integer.parseInt(nfaElement.getAttribute("id"));
                 Set<State> states = extractStates(nfaElement.getElementsByTagName("state"));
                 State startState = extractStartState(nfaElement.getElementsByTagName("startState").item(0).getTextContent(), states);
@@ -45,27 +44,21 @@ public class OpenFile implements OpenFileCommand {
                 String alphabetStr = nfaElement.getElementsByTagName("alphabet").item(0).getTextContent();
                 Character[] alphabet = alphabetStr.replaceAll(",", "").chars().mapToObj(c -> (char) c).toArray(Character[]::new);
 
-                // Create NFA object
                 NFA nfa = new NFA(id, states, startState, acceptingStates, alphabet);
 
-                // Add NFA to LoadedNFAS
                 LoadedNFAS.getInstance().addNFA(nfa);
             }
 
-            // Now you have the NFA objects loaded into LoadedNFAS
-            // You can access them as needed
             for (NFA nfa : LoadedNFAS.getInstance().getNFAS()) {
                 System.out.println("NFA ID: " + nfa.getId());
                 System.out.println("States: " + nfa.getStates());
                 System.out.println("Start State: " + nfa.getStartState());
                 System.out.println("Accepting States: " + nfa.getAcceptingStates());
 
-                // Concatenate characters into a string
                 StringBuilder alphabetBuilder = new StringBuilder();
                 for (Character character : nfa.getAlphabet()) {
                     alphabetBuilder.append(character).append(",");
                 }
-                // Remove the trailing comma
                 String alphabetString = alphabetBuilder.toString();
                 if (alphabetString.length() > 0) {
                     alphabetString = alphabetString.substring(0, alphabetString.length() - 1);
@@ -76,7 +69,6 @@ public class OpenFile implements OpenFileCommand {
 
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
-            // Handle exceptions
         }
     }
 
@@ -88,7 +80,6 @@ public class OpenFile implements OpenFileCommand {
             boolean isAccepting = Boolean.parseBoolean(stateElement.getElementsByTagName("isAccepting").item(0).getTextContent());
             State state = new State(stateId, isAccepting);
 
-            // Extract transitions
             NodeList transitionNodes = stateElement.getElementsByTagName("transition");
             for (int j = 0; j < transitionNodes.getLength(); j++) {
                 String transition = transitionNodes.item(j).getTextContent();

@@ -29,17 +29,14 @@ public class SaveCommand implements ISaveCommand {
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.newDocument();
 
-            // Root element
             Element rootElement = doc.createElement("nfas");
             doc.appendChild(rootElement);
 
-            // Iterate over NFAs
             for (NFA nfa : LoadedNFAS.getInstance().getNFAS()) {
                 Element nfaElement = doc.createElement("nfa");
                 nfaElement.setAttribute("id", String.valueOf(nfa.getId()));
                 rootElement.appendChild(nfaElement);
 
-                // States element
                 Element statesElement = doc.createElement("states");
                 nfaElement.appendChild(statesElement);
 
@@ -62,13 +59,10 @@ public class SaveCommand implements ISaveCommand {
                     stateElement.appendChild(transitionsElement);
                     statesElement.appendChild(stateElement);
                 }
-
-                // Start state element
                 Element startStateElement = doc.createElement("startState");
                 startStateElement.appendChild(doc.createTextNode(String.valueOf(nfa.getStartState().getId())));
                 nfaElement.appendChild(startStateElement);
 
-                // Accepting states element
                 Element acceptingStatesElement = doc.createElement("acceptingStates");
                 StringBuilder acceptingStatesStr = new StringBuilder();
                 for (State state : nfa.getAcceptingStates()) {
@@ -80,14 +74,13 @@ public class SaveCommand implements ISaveCommand {
                 acceptingStatesElement.appendChild(doc.createTextNode(acceptingStatesStr.toString()));
                 nfaElement.appendChild(acceptingStatesElement);
 
-                // Alphabet element
                 Element alphabetElement = doc.createElement("alphabet");
                 StringBuilder alphabetStr = new StringBuilder();
                 for (Character character : nfa.getAlphabet()) {
                     alphabetStr.append(character).append(",");
                 }
                 if (alphabetStr.length() > 0) {
-                    alphabetStr.setLength(alphabetStr.length() - 1); // Remove trailing comma
+                    alphabetStr.setLength(alphabetStr.length() - 1);
                 }
                 alphabetElement.appendChild(doc.createTextNode(alphabetStr.toString()));
                 nfaElement.appendChild(alphabetElement);
@@ -110,7 +103,6 @@ public class SaveCommand implements ISaveCommand {
     }
 
     private boolean isValidXmlCharacter(char ch) {
-        // Check if the character is valid XML
-        return ch != '\u0000'; // Exclude the null character
+        return ch != '\u0000';
     }
 }

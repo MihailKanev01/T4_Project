@@ -33,7 +33,6 @@ public class IsNFADeterministic implements IsNFADeterministicMethod {
             }
         }
 
-        // If all states have at most one transition per symbol, NFA is deterministic
         return "NFA with id <" + nfa.getId() + "> is deterministic";
     }
     private NFA findNFA(int id){

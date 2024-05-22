@@ -35,7 +35,6 @@ public class PrintNFA implements PrintNFASMethod {
         for (Character c : nfa.getAlphabet()) {
             sb.append(c).append(",");
         }
-        // Remove the trailing comma
         if (sb.charAt(sb.length() - 1) == ',') {
             sb.deleteCharAt(sb.length() - 1);
         }

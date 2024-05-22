@@ -1,35 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <nfas>
-    <nfa id="6">
+    <nfa id="3">
         <states>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>x</transition>
+                </transitions>
+            </state>
             <state id="2">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>0</transition>
-                    <transition>1</transition>
+                    <transition>z</transition>
                 </transitions>
-            </state>
-            <state id="6">
-                <isAccepting>false</isAccepting>
-                <transitions/>
             </state>
             <state id="1">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>1</transition>
+                    <transition>y</transition>
                 </transitions>
             </state>
+        </states>
+        <startState>0</startState>
+        <acceptingStates>2</acceptingStates>
+        <alphabet>x,y,z</alphabet>
+    </nfa>
+    <nfa id="10">
+        <states>
             <state id="1">
                 <isAccepting>false</isAccepting>
                 <transitions>
                     <transition>b</transition>
                 </transitions>
             </state>
-            <state id="0">
+            <state id="10">
                 <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>0</transition>
-                </transitions>
+                <transitions/>
             </state>
             <state id="0">
                 <isAccepting>false</isAccepting>
@@ -37,9 +43,28 @@
                     <transition>a</transition>
                 </transitions>
             </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
         </states>
-        <startState>6</startState>
-        <acceptingStates>1</acceptingStates>
+        <startState>10</startState>
+        <acceptingStates>1,1</acceptingStates>
         <alphabet>0,a,1,b</alphabet>
     </nfa>
     <nfa id="7">
@@ -67,10 +92,10 @@
     </nfa>
     <nfa id="8">
         <states>
-            <state id="1">
+            <state id="0">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>b</transition>
+                    <transition>a</transition>
                 </transitions>
             </state>
             <state id="0">
@@ -86,20 +111,20 @@
                     <transition>1</transition>
                 </transitions>
             </state>
+            <state id="8">
+                <isAccepting>false</isAccepting>
+                <transitions/>
+            </state>
             <state id="1">
                 <isAccepting>false</isAccepting>
                 <transitions>
                     <transition>1</transition>
                 </transitions>
             </state>
-            <state id="8">
-                <isAccepting>false</isAccepting>
-                <transitions/>
-            </state>
-            <state id="0">
+            <state id="1">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>a</transition>
+                    <transition>b</transition>
                 </transitions>
             </state>
         </states>
@@ -107,7 +132,30 @@
         <acceptingStates>1</acceptingStates>
         <alphabet>0,a,1,b</alphabet>
     </nfa>
-    <nfa id="2">
+    <nfa id="12">
+        <states>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>b</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>a</transition>
+                </transitions>
+            </state>
+            <state id="12">
+                <isAccepting>false</isAccepting>
+                <transitions/>
+            </state>
+        </states>
+        <startState>12</startState>
+        <acceptingStates>1</acceptingStates>
+        <alphabet>a,b</alphabet>
+    </nfa>
+    <nfa id="4">
         <states>
             <state id="1">
                 <isAccepting>false</isAccepting>
@@ -119,6 +167,128 @@
                 <isAccepting>false</isAccepting>
                 <transitions>
                     <transition>0</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>a</transition>
+                </transitions>
+            </state>
+            <state id="4">
+                <isAccepting>false</isAccepting>
+                <transitions/>
+            </state>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>b</transition>
+                </transitions>
+            </state>
+        </states>
+        <startState>4</startState>
+        <acceptingStates>1</acceptingStates>
+        <alphabet>0,a,1,b</alphabet>
+    </nfa>
+    <nfa id="9">
+        <states>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>b</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>a</transition>
+                </transitions>
+            </state>
+            <state id="9">
+                <isAccepting>false</isAccepting>
+                <transitions/>
+            </state>
+        </states>
+        <startState>9</startState>
+        <acceptingStates>1</acceptingStates>
+        <alphabet>0,a,1,b</alphabet>
+    </nfa>
+    <nfa id="11">
+        <states>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>b</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>a</transition>
+                </transitions>
+            </state>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+        </states>
+        <startState>0</startState>
+        <acceptingStates>1</acceptingStates>
+        <alphabet>0,a,1,b</alphabet>
+    </nfa>
+    <nfa id="2">
+        <states>
+            <state id="0">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>1</transition>
                 </transitions>
             </state>
             <state id="2">
@@ -152,30 +322,11 @@
         <acceptingStates>1</acceptingStates>
         <alphabet>a,b</alphabet>
     </nfa>
-    <nfa id="4">
+    <nfa id="6">
         <states>
-            <state id="1">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>1</transition>
-                </transitions>
-            </state>
-            <state id="1">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>b</transition>
-                </transitions>
-            </state>
-            <state id="4">
+            <state id="6">
                 <isAccepting>false</isAccepting>
                 <transitions/>
-            </state>
-            <state id="2">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>0</transition>
-                    <transition>1</transition>
-                </transitions>
             </state>
             <state id="0">
                 <isAccepting>false</isAccepting>
@@ -189,8 +340,27 @@
                     <transition>0</transition>
                 </transitions>
             </state>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>1</transition>
+                </transitions>
+            </state>
+            <state id="1">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>b</transition>
+                </transitions>
+            </state>
         </states>
-        <startState>4</startState>
+        <startState>6</startState>
         <acceptingStates>1</acceptingStates>
         <alphabet>0,a,1,b</alphabet>
     </nfa>
@@ -202,6 +372,13 @@
                     <transition>1</transition>
                 </transitions>
             </state>
+            <state id="2">
+                <isAccepting>false</isAccepting>
+                <transitions>
+                    <transition>0</transition>
+                    <transition>1</transition>
+                </transitions>
+            </state>
             <state id="1">
                 <isAccepting>false</isAccepting>
                 <transitions>
@@ -211,92 +388,18 @@
             <state id="0">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>a</transition>
-                </transitions>
-            </state>
-            <state id="2">
-                <isAccepting>false</isAccepting>
-                <transitions>
                     <transition>0</transition>
-                    <transition>1</transition>
                 </transitions>
             </state>
             <state id="0">
                 <isAccepting>false</isAccepting>
                 <transitions>
-                    <transition>0</transition>
+                    <transition>a</transition>
                 </transitions>
             </state>
         </states>
         <startState>0</startState>
         <acceptingStates>1</acceptingStates>
         <alphabet>0,a,1,b</alphabet>
-    </nfa>
-    <nfa id="9">
-        <states>
-            <state id="9">
-                <isAccepting>false</isAccepting>
-                <transitions/>
-            </state>
-            <state id="1">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>1</transition>
-                </transitions>
-            </state>
-            <state id="1">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>b</transition>
-                </transitions>
-            </state>
-            <state id="0">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>0</transition>
-                </transitions>
-            </state>
-            <state id="2">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>0</transition>
-                    <transition>1</transition>
-                </transitions>
-            </state>
-            <state id="0">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>a</transition>
-                </transitions>
-            </state>
-        </states>
-        <startState>9</startState>
-        <acceptingStates>1,1</acceptingStates>
-        <alphabet>0,a,1,b</alphabet>
-    </nfa>
-    <nfa id="3">
-        <states>
-            <state id="2">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>z</transition>
-                </transitions>
-            </state>
-            <state id="1">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>y</transition>
-                </transitions>
-            </state>
-            <state id="0">
-                <isAccepting>false</isAccepting>
-                <transitions>
-                    <transition>x</transition>
-                </transitions>
-            </state>
-        </states>
-        <startState>0</startState>
-        <acceptingStates>2</acceptingStates>
-        <alphabet>x,y,z</alphabet>
     </nfa>
 </nfas>
