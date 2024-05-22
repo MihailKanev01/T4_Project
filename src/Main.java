@@ -7,10 +7,5 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         FileMenu fileMenu = new FileMenu(scanner);
         fileMenu.open();
-
-
-
-
-
     }
 }
